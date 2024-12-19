@@ -1,7 +1,7 @@
-# Stellar Classification Project - README
+# Stellar Classification - README
 
 ## Introduction
-This project involves the analysis and classification of stellar objects using the **Stellar Classification Dataset (SDSS17)**. The dataset is derived from the Sloan Digital Sky Survey (SDSS) and includes features that describe various properties of celestial objects, enabling their classification into stars, galaxies, or quasars.
+This project involves the analysis and classification of stellar objects using the **[Stellar Classification Dataset (SDSS17)](https://www.kaggle.com/code/gsabhinav/multi-class-classification-noteboook)**. The dataset is derived from the Sloan Digital Sky Survey (SDSS) and includes features that describe various properties of celestial objects, enabling their classification into stars, galaxies, or quasars.
 
 ## Dataset Description
 The dataset contains the following attributes:
@@ -79,9 +79,7 @@ The project evaluates and compares the performance of multiple classifiers to id
    ```
 
 ## Future Work
-- Implement hyperparameter tuning for improved model performance.
-- Explore additional features and transformations for better insights.
-- Integrate deep learning models for enhanced classification.
+- Implement other classifications
 
 ## Acknowledgments
 - **SDSS** for providing the dataset.
