@@ -1,35 +1,93 @@
-obj_ID = Object Identifier, the unique value that identifies the object in the image catalog used by the Catalog Access Service.
+# Stellar Classification Project - README
 
-alpha = Right Ascension angle (at J2000 epoch)
+## Introduction
+This project involves the analysis and classification of stellar objects using the **Stellar Classification Dataset (SDSS17)**. The dataset is derived from the Sloan Digital Sky Survey (SDSS) and includes features that describe various properties of celestial objects, enabling their classification into stars, galaxies, or quasars.
 
-delta = Declination angle (at J2000 epoch)
+## Dataset Description
+The dataset contains the following attributes:
 
-u = Ultraviolet filter magnitude in the photometric system
+- **obj_ID**: Unique identifier for each object in the image catalog.
+- **alpha**: Right Ascension angle (J2000 epoch).
+- **delta**: Declination angle (J2000 epoch).
+- **u**: Ultraviolet filter magnitude in the photometric system.
+- **g**: Green filter magnitude in the photometric system.
+- **r**: Red filter magnitude in the photometric system.
+- **i**: Near-infrared filter magnitude in the photometric system.
+- **z**: Infrared filter magnitude in the photometric system.
+- **run_ID**: Run number used to identify the specific scan.
+- **rereun_ID**: Rerun number specifying how the image was processed.
+- **cam_col**: Camera column identifying the scanline within the run.
+- **field_ID**: Field number identifying each field.
+- **spec_obj_ID**: Unique ID for optical spectroscopic objects.
+- **class**: Object class ("Galaxy", "Star", "Quasar").
+- **redshift**: Redshift value based on the increase in wavelength.
+- **plate**: Plate ID identifying each plate in SDSS.
+- **MJD**: Modified Julian Date, indicating when the data was collected.
+- **fiber_ID**: Fiber ID identifying the light focal plane in each observation.
 
-g = Green filter in the photometric system
+## Implementation
+### 1. Data Loading and Exploration
+The dataset is loaded using Pandas, and initial exploration includes:
+- Displaying the first few rows.
+- Checking data types and non-null values.
+- Identifying and handling missing values.
 
-r = Red filter in the photometric system
+### 2. Data Preprocessing
+- **Feature Scaling**: StandardScaler is applied to normalize the data.
+- **Train-Test Split**: Data is split into training (80%) and testing (20%) sets.
 
-i = Near Infrared filter in the photometric system
+### 3. Classification Models
+Several classification algorithms are implemented and evaluated:
 
-z = Infrared filter in the photometric system
+#### K-Nearest Neighbors (KNN)
+- Parameters: `n_neighbors=5`.
+- Evaluates accuracy and generates a classification report.
 
-run_ID = Run Number used to identify the specific scan
+#### Decision Tree Classifier
+- Parameters: `random_state=42`.
+- Trains and evaluates using accuracy and a classification report.
 
-rereun_ID = Rerun Number to specify how the image was processed
+#### Naive Bayes (GaussianNB)
+- Evaluates performance using accuracy and classification metrics.
 
-cam_col = Camera column to identify the scanline within the run
+#### Support Vector Machine (SVM)
+- Parameters: `kernel='linear'` (modifiable).
+- Trains and evaluates the model using accuracy and classification metrics.
 
-field_ID = Field number to identify each field
+#### Neural Network (MLPClassifier)
+- Parameters: `hidden_layer_sizes=(100, 50)`, `max_iter=500`, `random_state=42`.
+- Trains the network and evaluates using accuracy and a classification report.
 
-spec_obj_ID = Unique ID used for optical spectroscopic objects (this means that 2 different observations with the same spec_obj_ID must share the output class)
+### 4. Evaluation
+- **Confusion Matrix**: Displays performance for the best model.
+- **Classification Reports**: Summarize precision, recall, and F1-score for all models.
 
-class = object class (galaxy, star or quasar object)
+## Results
+The project evaluates and compares the performance of multiple classifiers to identify the most suitable model for stellar classification based on accuracy and detailed metrics.
 
-redshift = redshift value based on the increase in wavelength
+## Prerequisites
+- Python (>= 3.7)
+- Libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`
 
-plate = plate ID, identifies each plate in SDSS
+## How to Run
+1. Clone this repository.
+2. Ensure the dataset (`star_classification.csv`) is located in the appropriate directory.
+3. Install the required libraries using `pip install -r requirements.txt`.
+4. Run the script:
+   ```bash
+   python stellar_classification.py
+   ```
 
-MJD = Modified Julian Date, used to indicate when a given piece of SDSS data was taken
+## Future Work
+- Implement hyperparameter tuning for improved model performance.
+- Explore additional features and transformations for better insights.
+- Integrate deep learning models for enhanced classification.
 
-fiber_ID = fiber ID that identifies the fiber that pointed the light at the focal plane in each observation
+## Acknowledgments
+- **SDSS** for providing the dataset.
+- Scikit-learn for machine learning tools.
+
+---
+
+This project is a step toward understanding and classifying celestial objects through computational techniques. Contributions and suggestions are welcome!
+

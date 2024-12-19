@@ -10,14 +10,6 @@ from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-# Définir les paramètres à tester
-param_grid = {
-    'hidden_layer_sizes': [(100, 50), (100, 50, 25)],
-    'learning_rate_init': [0.001, 0.01, 0.1],
-    'max_iter': [1000, 2000]
-}
-
-
 # Charger le dataset
 file_path = 'dataset/star_classification.csv'
 data = pd.read_csv(file_path)
