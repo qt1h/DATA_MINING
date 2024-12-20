@@ -129,5 +129,6 @@ weighted avg       0.97      0.97      0.97     20000
 
 Matrice de confusion enregistrée dans : confusion_matrices/confusion_matrix_Multi-Layer_Perceptron.png
 ...
-![exemple](results/exemple_results.png "exemple_results")
 ```
+
+![exemple](results/exemple_results.png "exemple_results")
