@@ -131,4 +131,4 @@ Matrice de confusion enregistrée dans : confusion_matrices/confusion_matrix_Mul
 ...
 ```
 
-![exemple](results/exemple_results.png "exemple_results")
+![exemple](exemple_results.png "exemple_results")
