@@ -163,6 +163,5 @@ cython_debug/
 
 
 .conda/
-/dataset
 .DS_Store
 /.vscode
