@@ -82,7 +82,8 @@ The project evaluates and compares the performance of multiple classifiers to id
 
 ## Future Work
 - Implement other classifications
-
+- Implement helper and classification choice on run
+- GUI
 ## Acknowledgments
 - **SDSS** for providing the dataset.
 - Scikit-learn for machine learning tools.
