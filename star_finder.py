@@ -1,3 +1,14 @@
+"""
+Nom du script : star_finder.py
+Auteur        : Quentin GIRARDAT
+Date          : 20/12/2024
+Description   : Ce script réalise la classification de 3 classes : GALAXY, QSO et STAR voir README pour plus d'info.
+Version       : 1.0
+
+Licence       : ["MIT Licence"]
+Contact       : girardatquentin@gmail.com
+"""
+
 import os
 
 import matplotlib.pyplot as plt
@@ -74,6 +85,16 @@ models = [
 # Fonction utilitaire pour évaluer les modèles
 results = {}
 def evaluate_model(model, model_name):
+    """
+    Entraîne et évalue un modèle de classification.
+
+    Args:
+        model (object): Modèle de classification à entraîner.
+        model_name (str): Nom du modèle.
+
+    Returns:
+        None: Les résultats (précision et matrice de confusion) sont affichés et sauvegardés.
+    """
     try:
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
@@ -101,6 +122,15 @@ for model_name, model in models:
 
 # Comparaison des modèles
 def plot_model_comparison(results):
+    """
+    Génère un graphique comparatif des précisions des différents modèles.
+
+    Args:
+        results (dict): Dictionnaire contenant les noms des modèles et leurs précisions.
+
+    Returns:
+        None: Affiche un graphique de comparaison.
+    """
     results_df = pd.DataFrame(list(results.items()), columns=['Algorithm', 'Accuracy'])
     results_df = results_df.sort_values(by='Accuracy', ascending=False)
     
@@ -115,7 +145,7 @@ def plot_model_comparison(results):
 
 plot_model_comparison(results)
 
-# Pairplot des caractéristiques sélectionnées (prend du temps)
+# Pairplot des caractéristiques (prend du temps)
 # selected_columns = ['r', 'i', 'alpha', 'delta', 'redshift', 'class']
 # sns.pairplot(data[selected_columns], hue='class', palette='Set1')
 # plt.show()
