@@ -1,7 +1,7 @@
 # Stellar Classification - README
 
 ## Introduction
-This project involves the analysis and classification of stellar objects using the **[Stellar Classification Dataset (SDSS17)](https://www.kaggle.com/code/gsabhinav/multi-class-classification-noteboook)**. The dataset is derived from the Sloan Digital Sky Survey (SDSS) and includes features that describe various properties of celestial objects, enabling their classification into stars, galaxies, or quasars.
+This project involves the analysis and classification of stellar objects using the **[Stellar Classification Dataset (SDSS17)](https://www.kaggle.com/datasets/fedesoriano/stellar-classification-dataset-sdss17)**. The dataset is derived from the Sloan Digital Sky Survey (SDSS) and includes features that describe various properties of celestial objects, enabling their classification into stars, galaxies, or quasars.
 
 ## Dataset Description
 The dataset contains the following attributes:
@@ -24,6 +24,8 @@ The dataset contains the following attributes:
 - **plate**: Plate ID identifying each plate in SDSS.
 - **MJD**: Modified Julian Date, indicating when the data was collected.
 - **fiber_ID**: Fiber ID identifying the light focal plane in each observation.
+
+**[source](https://www.kaggle.com/code/gsabhinav/multi-class-classification-noteboook)**
 
 ## Implementation
 ### 1. Data Loading and Exploration

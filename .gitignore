@@ -164,4 +164,5 @@ cython_debug/
 
 .conda/
 /dataset
-star_classification.csv
+.DS_Store
+/.vscode
